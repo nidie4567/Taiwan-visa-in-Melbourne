@@ -11,7 +11,7 @@ headers = {
     "Content-Type": "application/x-www-form-urlencoded"
 }
 
-# 日期和时间组合
+# 日期和时间组合【请修改此处】
 dates = ["2024/11/25", "2024/11/26", "2024/11/27", "2024/11/28", "2024/11/29", "2024/12/02", "2024/12/03", "2024/12/04"]
 times = ["09:00", "11:00", "13:00", "14:00"]
 
@@ -31,7 +31,7 @@ async def make_appointment(session, appDate, appTime):
     form_data = {
         "appDate": appDate,  # 日期
         "appTime": appTime,  # 时间
-        "applicationNo": "Mjg0OTk0OTQ5MzFhY2RmYTAxOTMyNWFlMTkwMjA0NWU=",  # 请在浏览器预约界面按F12查找，是一长串字母和数字的组合，最后还有等号
+        "applicationNo": "Mjg0OTk0OTQ5MzFhYsd1f3s1mYTAxOsd1f3s1lNWU=",  # 请在浏览器预约界面按F12查找，是一长串字母和数字的组合，最后还有等号【请修改此处】
         "overseaOfficeId": "MTA5",  # 已知的其他隐藏字段
         "applyType": "D",
         "overseaOfficeIdOrginal": "109"
@@ -73,8 +73,8 @@ async def task_loop(session, appDate, appTime):
         if stop_flag:
             break
 
-        # 每个任务完成一次后间隔0秒继续发起下一次请求
-        await asyncio.sleep(0.5)
+        # 每个任务完成一次后间隔1秒继续发起下一次请求【请修改此处】
+        await asyncio.sleep(1)
 
 # 主程序
 async def main():
